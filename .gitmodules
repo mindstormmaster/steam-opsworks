@@ -1,0 +1,12 @@
+[submodule "supervisor"]
+	path = supervisor
+	url = https://github.com/opscode-cookbooks/supervisor.git
+[submodule "python"]
+	path = python
+	url = https://github.com/opscode-cookbooks/python.git
+[submodule "build-essential"]
+	path = build-essential
+	url = https://github.com/opscode-cookbooks/build-essential.git
+[submodule "yum"]
+	path = yum
+	url = https://github.com/opscode-cookbooks/yum.git

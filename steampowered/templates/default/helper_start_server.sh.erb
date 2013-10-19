@@ -1,0 +1,4 @@
+#!/bin/bash
+cd BladeSymphony/
+
+screen -d -m -L -S $1 sh srcds_run.sh +maxplayers 16 +map $4 +servercfgfile $2 +port $3

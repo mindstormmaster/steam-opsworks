@@ -34,7 +34,7 @@ end
 execute "tar -xvzf #{node['steam']['dir']}/steamcmd_linux.tar.gz" do
   cwd node['steam']['dir']
   user node['steam']['user']
-  creates "#{node['steam']['dir']}/steam"
+  creates "#{node['steam']['dir']}/steamcmd.sh"
 end
 
 3.times do
