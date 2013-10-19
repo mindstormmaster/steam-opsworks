@@ -1,4 +1,18 @@
 
+if node['steam']['supervisor']
+  include_recipe "supervisor"
+
+  directory "#{node['steam']['dir']}/supervisor" do
+    owner node['steam']['user']
+    group node['steam']['user']
+    mode "0755"
+    action :create
+  end
+else
+  package "screen" do
+    action :install
+  end
+end
 
 
 
@@ -64,21 +78,8 @@ end
 
 
 if node['steam']['supervisor']
-  include_recipe "supervisor"
-
-  directory "#{node['steam']['dir']}/supervisor" do
-    owner node['steam']['user']
-    group node['steam']['user']
-    mode "0755"
-    action :create
-  end
-
   execute "echo '225600' > #{node['steam']['dir']}/BladeSymphony/steam_appid.txt" do
  	user node['steam']['user']
-  end
-else
-  package "screen" do
-    action :install
   end
 end
 
