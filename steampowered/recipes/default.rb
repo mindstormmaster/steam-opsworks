@@ -45,6 +45,6 @@ end
       "HOME" => node['steam']['dir']
     })
     # Sometimes it updates and it returns 1 on successful update
-    returns [0,1,134]
+    returns [0,1,134,139]
   end
 end
