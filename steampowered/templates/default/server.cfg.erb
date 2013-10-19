@@ -1,0 +1,52 @@
+// Server Hostname
+hostname "<%= gs.name %>" 
+
+
+
+// Server Password
+sv_password ""
+
+
+
+// RCON Password
+rcon_password "<%= gs.rconPassword %>"
+
+
+
+// Time Limit
+mp_timelimit 20
+
+
+
+// Logging
+log off
+sv_logfile 1
+sv_logecho 0
+sv_logbans 1
+
+<% if not gs.ranked %>
+sv_ranked 0
+<% end %>
+
+// MapCycle File
+<% if gs.mode == 'ffa' %>
+mapcyclefile maplist_ffa.txt
+<% else %>
+mapcyclefile maplist_duel.txt
+<% end %>
+
+
+// Cheats Disabled
+sv_cheats 0
+
+// AllTalk Enabled
+sv_alltalk 1
+
+// Misc.
+sv_allowupload 1
+sv_allowdownload 1
+
+
+<% if gs.mode == '2v2' %>
+vs_duel_debug_pvp 2
+<% end %>
